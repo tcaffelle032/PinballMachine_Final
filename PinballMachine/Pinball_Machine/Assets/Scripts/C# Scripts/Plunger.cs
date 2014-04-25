@@ -5,7 +5,7 @@ public class Plunger : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		this.gameObject.renderer.material.color = Color.gray;
 	}
 	void OnEnable(){
 		GameManager.OnUserInput += pullPlunger;
