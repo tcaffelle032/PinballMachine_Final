@@ -3,6 +3,7 @@ using System.Collections;
 
 public static class GameManager
 {
+	//Comment
     /// <summary>
     /// Overall Game Manager, here are public variables
     /// that can be used by all classes such as the score
