@@ -213,3 +213,14 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+*.dll
+PinballMachine/Pinball_Machine/Library/ScriptAssemblies/Assembly-CSharp.dll
+PinballMachine/Pinball_Machine/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+PinballMachine/Pinball_Machine/Library/assetDatabase3
+PinballMachine/Pinball_Machine/Pinball_Machine-csharp.sln
+PinballMachine/Pinball_Machine/Pinball_Machine.sln
+PinballMachine/Pinball_Machine/Temp/UnityLockfile
+PinballMachine/Pinball_Machine/Temp/UnityTempFile-1687521e940ccca44a10b30910a92eb1
+PinballMachine/Pinball_Machine/Temp/UnityTempFile-070fedbfb55e8264599f8a845e200a4e
+PinballMachine/Pinball_Machine/Temp/UnityTempFile-2d234f19d12cc17408a10a394d2e202d
+PinballMachine/Pinball_Machine/Pinball_Machine.userprefs
