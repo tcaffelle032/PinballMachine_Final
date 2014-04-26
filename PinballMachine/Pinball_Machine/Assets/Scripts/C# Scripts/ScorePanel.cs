@@ -15,7 +15,7 @@ public class ScorePanel : MonoBehaviour {
 	void OnTriggerEnter(Collider collider){
 		if(collider.name =="Pinball"){
 			GameManager.ScoreUpdate(Points);
-			this.renderer.material.color = Color.blue;
+			this.renderer.material.color = new Color(255/255.0f,142/255.0f,0/255.0f,255/255.0f);
 
 		}
 	}
