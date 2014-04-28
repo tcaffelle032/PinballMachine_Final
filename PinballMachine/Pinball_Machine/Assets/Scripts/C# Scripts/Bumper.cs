@@ -5,7 +5,14 @@ public class Bumper : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		var lightObject = this.gameObject;
+
+		lightObject.AddComponent<Light>();
+		var flashLight = lightObject.GetComponent<Light>();
+		flashLight.light.color = Color.yellow;
+		flashLight.intensity = .5f;
+		flashLight.light.enabled = false;
+		//lightObject.SetActive(lightSwitch);
 	}
 
 	void OnEnable(){
@@ -24,7 +31,7 @@ public class Bumper : MonoBehaviour {
     {
 		if(collider.name == "Pinball"){
 			this.renderer.material.color = new Color(0,0,0);
-       	    collider.rigidbody.AddForce(collider.transform.forward);
+       	    collider.rigidbody.AddForce(-this.transform.forward);
 			GameManager.ScoreUpdate(100);
 
 			var colors = new ArrayList();
@@ -38,14 +45,20 @@ public class Bumper : MonoBehaviour {
 			this.renderer.material.color = (Color)colors[Random.Range(0,4)];
 
 			GameManager.PlayEffect(GameManager.AudioType.Bumper);
-		
-		
 
+			createLight(true);
 		}
     }
 	void OnTriggerExit(Collider collider){
 		if(collider.name == "Pinball"){
 			this.renderer.material.color = Color.white;
+			createLight(false);
+
 		}
+	}
+
+	void createLight(bool lightSwitch){
+		var lightGameObject = this.gameObject.GetComponent<Light>();
+		lightGameObject.enabled = lightSwitch;
 	}
 }

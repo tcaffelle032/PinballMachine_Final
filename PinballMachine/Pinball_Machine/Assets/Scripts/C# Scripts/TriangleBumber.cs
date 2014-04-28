@@ -22,7 +22,7 @@ public class TriangleBumber : MonoBehaviour
 						
 						GameManager.ScoreUpdate (50);
 						collider.rigidbody.AddForce (-this.transform.forward * .5f); 
-			GameManager.PlayEffect(GameManager.AudioType.TriBounce);
+						GameManager.PlayEffect(GameManager.AudioType.TriBounce);
 				}
 
 		}
