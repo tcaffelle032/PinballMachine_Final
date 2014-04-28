@@ -8,6 +8,7 @@ public class BallRespawn : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		respawn();
+
 	}
 	
 	void OnEnable(){
@@ -30,11 +31,16 @@ public class BallRespawn : MonoBehaviour {
 		float rightPos = plunger.transform.forward.z *spawnZ;
 		float upPos = plunger.transform.up.y*spawnY;
 		
+		
 
 		var pinball = GameObject.Instantiate(Resources.Load("Pinball"),new Vector3(spawnX,upPos,rightPos),new Quaternion(0,0,0,0));
 			pinball.name = "Pinball";
+
+
 		}
 		else GameManager.GameEnded();
         
     }
+
+
 }
