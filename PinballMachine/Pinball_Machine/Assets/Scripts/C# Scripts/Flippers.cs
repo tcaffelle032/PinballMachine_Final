@@ -10,7 +10,7 @@ public  class Flippers: MonoBehaviour
     /// a static manager so it is created at run-time 
     /// and doesn't need an in game object.
     /// </summary>
-    public static void FlipperControl() 
+    public void FlipperControl() 
     {
 
         /* var joint = LFlipper.hingeJoint;
